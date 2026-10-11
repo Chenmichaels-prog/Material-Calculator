@@ -13,8 +13,6 @@ A free, browser-based material estimation tool for architects, interior designer
 
 https://chenmichaels-prog.github.io/Material-Calculator/
 
-> The demo link becomes available after enabling GitHub Pages (Settings → Pages → Deploy from a branch → main → /root).
-
 ## Usage
 
 Open `index.html` in your browser or use the GitHub Pages link after deployment. All calculations run locally.
@@ -27,7 +25,21 @@ Open `index.html` in your browser or use the GitHub Pages link after deployment.
 
 ## Support development
 
-If this project helps you, consider supporting its continued maintenance via [GitHub Sponsors](https://github.com/sponsors/Chenmichaels-prog). Sponsorship availability depends on GitHub approval.
+This tool is free and open-source. If it helps with your project estimates, you can support future maintenance, documentation, fixes, and new calculators through [GitHub Sponsors](https://github.com/sponsors/Chenmichaels-prog) (once the sponsorship profile is approved and active).
+
+Suggested monthly supporter levels:
+
+| Level | Monthly | What your support helps fund |
+| --- | ---: | --- |
+| Community Supporter | $3 | Routine maintenance, bug fixes and documentation |
+| Development Backer | $10 | New calculation features and improvements |
+| Project Champion | $25 | Continued independent development and testing |
+
+All tiers are voluntary contributions; the calculator remains free. These are **suggested tier descriptions**, not a claim that tiers have already been published on GitHub.
+
+### Share feedback
+
+Found an error or have a material type you'd like supported? [Open a GitHub issue](https://github.com/Chenmichaels-prog/Material-Calculator/issues).
 
 ## License
 
