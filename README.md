@@ -1,6 +1,6 @@
 # Material Calculator V2.0
 
-A free, responsive, client-side material quantity and purchasing cost calculator for architects, interior designers, contractors and students.
+A free, responsive, bilingual (English / Bahasa Indonesia), client-side material quantity and purchasing cost calculator for architects, interior designers, contractors and students.
 
 **[Launch the live calculator](https://chenmichaels-prog.github.io/Material-Calculator/)** · [Support via GitHub Sponsors](https://github.com/sponsors/Chenmichaels-prog)
 
@@ -15,6 +15,10 @@ A free, responsive, client-side material quantity and purchasing cost calculator
 | Ceiling panels | Area, panel size, packaging | Boxes |
 | Wallpaper | Wall height, full-height strips and roll length | Rolls |
 | AAC / lightweight blocks | Wall area, nominal block dimensions, packing | Bundles / blocks |
+
+## Languages
+
+Switch between **English** and **Bahasa Indonesia** using the language selector in the header. Your choice is saved locally in the browser when storage is available. Calculation labels, validation messages, quantities, and the printable estimate follow the selected language. The default follows your browser's language.
 
 ## Cost estimate and PDF
 
