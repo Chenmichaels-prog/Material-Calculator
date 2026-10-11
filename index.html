@@ -73,7 +73,7 @@ $('unit').textContent=tr(cfg.price);
 }
 const err=val('error');if(language==='id'&&DICT[err])$('error').textContent=DICT[err];
 const printed=Object.fromEntries(CONFIG[active].fields.map(([fid,en])=>[fid,tr(en)]));
-if(val('mainResult')!=='—')$('printedInputs').textContent=(language==='id'?'Material: ':'Material: ')+tr(CONFIG[active].name)+' | '+CONFIG[active].fields.map(([fid,en])=>printed[fid]+': '+$('field-'+fid).value).join(' | ')+(language==='id'?' | cadangan: ':' | waste: ')+$('waste').value+'% | '+(language==='id'?'harga per ':'price per ')+tr(CONFIG[active].price)+': '+val('price');
+if(val('mainResult')!=='—')$('printedInputs').textContent=(language==='id'?'Material: ':'Material: ')+tr(CONFIG[active].name)+' | '+CONFIG[active].fields.map(([fid,en])=>printed[fid]+': '+$('field-'+fid).value).join(' | ')+(language==='id'?' | cadangan: ':' | waste: ')+$('waste').value+'% | '+(language==='id'?'harga per ':'price per ')+tr(CONFIG[active].price)+': Rp '+Number($('price').value).toLocaleString('id-ID');
 }
 function render(){baseRender();localize()}
 function calculate(){baseCalculate();localize()}
