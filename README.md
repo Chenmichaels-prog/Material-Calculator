@@ -1,46 +1,55 @@
-# Material Calculator
+# Material Calculator V2.0
 
-A free, browser-based material estimation tool for architects, interior designers, and contractors.
+A free, responsive, client-side material quantity and purchasing cost calculator for architects, interior designers, contractors and students.
 
-## Features
+**[Launch the live calculator](https://chenmichaels-prog.github.io/Material-Calculator/)** · [Support via GitHub Sponsors](https://github.com/sponsors/Chenmichaels-prog)
 
-- **Ceramic & porcelain tiles:** enter room dimensions, tile sizes, pieces per box and waste allowance; get the estimated number of tiles and whole boxes to purchase.
-- **SPC flooring:** enter room dimensions, plank dimensions, pieces per box and waste allowance.
-- **Wall paint:** estimate paint volume using wall area, deductions for openings, coats, coverage and waste.
-- Responsive UI; works without accounts, dependencies or a backend.
+## Supported calculators
 
-## Live demo
+| Material | Calculation | Purchase unit |
+| --- | --- | --- |
+| Ceramic / porcelain tiles | Area, waste, tiles, packaging | Boxes |
+| SPC flooring | Area, waste, planks, packaging | Boxes |
+| Wall paint | Surface, openings, coverage, coats | Cans |
+| Gypsum board | Area, openings, sheet size | Sheets |
+| Ceiling panels | Area, panel size, packaging | Boxes |
+| Wallpaper | Wall height, full-height strips and roll length | Rolls |
+| AAC / lightweight blocks | Wall area, nominal block dimensions, packing | Bundles / blocks |
 
-https://chenmichaels-prog.github.io/Material-Calculator/
+## Cost estimate and PDF
 
-## Usage
+Supply your **price per purchasing unit** in Indonesian rupiah (IDR). The calculator first rounds up to whole purchasing units, then multiplies by the unit price. Enter `0` if no price is available.
 
-Open `index.html` in your browser or use the GitHub Pages link after deployment. All calculations run locally.
+Use **Print / Save as PDF** to open your browser's print dialog; choose `Save as PDF` as the printer. This does not depend on a remote API.
 
-## Calculation assumptions
+## How to use
 
-- Tiles/planks: required units = ceil((net area × (1 + waste %)) / unit area); whole boxes = ceil(required units / pieces per box).
-- Paint: liters = (max(0, wall area − openings) × (1 + waste %) × coats) / manufacturer coverage.
-- Dimensions assume rectangular surfaces. Tile/plank estimation does not optimize actual cutting layout; paint quantities do not include substrate-specific losses or retail pack rounding.
+1. Choose the material.
+2. Enter dimensions and manufacturer pack coverage or product unit sizes.
+3. Set the expected waste percentage and supplier price per unit.
+4. Read the quantity estimate and rounded purchase cost.
+5. Print or save a PDF estimate if needed.
 
-## Support development
+The app is a standalone HTML file and needs no installation or database. Open `index.html` locally or use GitHub Pages.
 
-This tool is free and open-source. If it helps with your project estimates, you can support future maintenance, documentation, fixes, and new calculators through [GitHub Sponsors](https://github.com/sponsors/Chenmichaels-prog) (once the sponsorship profile is approved and active).
+## Important estimation assumptions
 
-Suggested monthly supporter levels:
+- **Area:** dimensions are rectangular and measured in meters unless specified otherwise.
+- **Waste:** applied to net area *before* calculating purchasing units.
+- **Boxes / bundles:** always rounded **up** to the next whole unit.
+- **Wall paint:** volume = net area × (1 + waste %) × coats / coverage per coat. Cans round up based on entered can capacity.
+- **Wallpaper:** estimated using complete strips at the entered wall height; deducted openings are converted to equivalent run length. Pattern repeats, wall segments, seams and unusable offcuts may require more rolls.
+- **AAC:** uses nominal block face dimensions, ignoring mortar joints, cuts and reinforcement. Thickness is displayed for identification, not structural design.
+- **Gypsum and ceiling panels:** count panels only, not framing, hangers, fasteners, compound or accessories.
+- **Costs:** material purchase cost only; excludes labor, freight, permits and taxes unless included in the entered supplier price.
+- This tool is for **preliminary estimates**, not a detailed quantity survey or purchase order. Verify against drawings, site measurements and manufacturer's datasheets.
 
-| Level | Monthly | What your support helps fund |
-| --- | ---: | --- |
-| Community Supporter | $3 | Routine maintenance, bug fixes and documentation |
-| Development Backer | $10 | New calculation features and improvements |
-| Project Champion | $25 | Continued independent development and testing |
+## Support open-source development
 
-All tiers are voluntary contributions; the calculator remains free. These are **suggested tier descriptions**, not a claim that tiers have already been published on GitHub.
+If the tool helps your work, consider [sponsoring development](https://github.com/sponsors/Chenmichaels-prog). Sponsorship depends on the creator's GitHub Sponsors account being approved and active.
 
-### Share feedback
-
-Found an error or have a material type you'd like supported? [Open a GitHub issue](https://github.com/Chenmichaels-prog/Material-Calculator/issues).
+Suggested monthly support levels are $3 (Community Supporter), $10 (Development Backer) and $25 (Project Champion). These are suggestions, not a statement that tiers have been published.
 
 ## License
 
-MIT License. See [LICENSE](LICENSE).
+MIT — see [LICENSE](LICENSE).
