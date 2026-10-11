@@ -1,8 +1,12 @@
-# Material Calculator V2.0
+# Material Calculator V2.1
 
 A free, responsive, bilingual (English / Bahasa Indonesia), client-side material quantity and purchasing cost calculator for architects, interior designers, contractors and students.
 
 **[Launch the live calculator](https://chenmichaels-prog.github.io/Material-Calculator/)** · [Support via GitHub Sponsors](https://github.com/sponsors/Chenmichaels-prog)
+
+## Project status
+
+Current application version: **V2.1** (as labeled in `index.html`). This is a preliminary estimating tool, not a verified bill of quantities. See [ROADMAP.md](ROADMAP.md) and [docs/ESTIMATION-GUIDE.md](docs/ESTIMATION-GUIDE.md) for limitations and planned validation.
 
 ## Supported calculators
 
@@ -25,6 +29,17 @@ Switch between **English** and **Bahasa Indonesia** using the language selector 
 Supply your **price per purchasing unit** in Indonesian rupiah (IDR). The calculator first rounds up to whole purchasing units, then multiplies by the unit price. Enter `0` if no price is available.
 
 Use **Print / Save as PDF** to open your browser's print dialog; choose `Save as PDF` as the printer. This does not depend on a remote API.
+
+## Local verification
+
+1. Open `index.html` in a modern browser (or serve the directory using `python -m http.server 8000`).
+2. Test each of the seven material tabs with known quantities and zero waste.
+3. Repeat using nonzero waste and supplier unit prices; verify that pack counts are rounded upward before pricing.
+4. Switch English / Bahasa Indonesia and verify that calculations do not change.
+5. Test invalid and empty inputs; printing must be disabled.
+6. Use Print / Save as PDF and inspect the resulting document.
+
+Automated browser regression tests are planned; do not interpret this checklist as proof those tests have passed.
 
 ## How to use
 
@@ -53,6 +68,10 @@ The app is a standalone HTML file and needs no installation or database. Open `i
 If the tool helps your work, consider [sponsoring development](https://github.com/sponsors/Chenmichaels-prog). Sponsorship depends on the creator's GitHub Sponsors account being approved and active.
 
 Suggested monthly support levels are $3 (Community Supporter), $10 (Development Backer) and $25 (Project Champion). These are suggestions, not a statement that tiers have been published.
+
+## Contributing and reporting problems
+
+Open an [issue](https://github.com/Chenmichaels-prog/Material-Calculator/issues) with material type, dimensions, expected output, actual output, browser, and screenshots where helpful. See [CONTRIBUTING.md](CONTRIBUTING.md) before proposing changes.
 
 ## License
 
